@@ -24,6 +24,10 @@ public class Counting extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.counteractivity);
         String over;
+        String c;
+        int cmplt;
+        c= String.valueOf(completed.getText());
+        cmplt=Integer.parseInt(c);
         overs= (EditText) findViewById(R.id.overs);
         completed= (EditText) findViewById(R.id.completed);
         balls= (EditText) findViewById(R.id.balls);
@@ -32,6 +36,11 @@ public class Counting extends AppCompatActivity {
         overs.setText(over);
         completed.setText("0");
         balls.setText("0");
+
+        if (cmplt == Integer.parseInt(String.valueOf(overs.getText())))
+        {
+            Toast.makeText(this, " All Overs completed", Toast.LENGTH_SHORT).show();
+        }
     }
 
 
