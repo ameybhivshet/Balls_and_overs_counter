@@ -48,9 +48,10 @@ public class Counting extends AppCompatActivity {
         ball= Integer.parseInt(b);
         c= String.valueOf(completed.getText());
         cmplt=Integer.parseInt(c);
-        ball++;
-        balls.setText(""+ball);
+
         if(cmplt!=Integer.parseInt(String.valueOf(overs.getText()))) {
+            ball++;
+            balls.setText(""+ball);
             if (ball == 6) {
                 balls.setText("" + ball);
                 cmplt++;
