@@ -30,13 +30,13 @@
         android:layout_alignParentEnd="true" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DONE"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:background="@drawable/next"
         android:id="@+id/button"
         android:onClick="done"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="80dp" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

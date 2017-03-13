@@ -4,15 +4,16 @@
     android:visibility="visible">
 
     <EditText
-        android:layout_width="60dp"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:id="@+id/completed"
         android:focusable="false"
 
+        android:visibility="visible"
+        android:textSize="20dp"
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3"
-        android:visibility="visible" />
+        android:layout_alignStart="@+id/textView3" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,51 +30,58 @@
         android:layout_centerHorizontal="true" />
 
     <EditText
-        android:layout_width="60dp"
+        android:layout_width="40dp"
 android:focusable="false"
         android:layout_height="wrap_content"
         android:id="@+id/overs"
         android:visibility="visible"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/button3"
-        android:layout_toEndOf="@+id/button3" />
+        android:textSize="20dp"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="plus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:background="@drawable/green"
         android:id="@+id/button2"
         android:onClick="plus"
         android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2" />
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="minus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:background="@drawable/red"
         android:id="@+id/button3"
         android:onClick="minus"
-        android:layout_marginTop="42dp"
-        android:layout_below="@+id/button2"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2" />
+        android:layout_alignTop="@+id/button2"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="reset"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:background="@drawable/refreshblue"
         android:onClick="reset"
+
         android:id="@+id/button4"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/button3"
-        android:layout_alignEnd="@+id/button3" />
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginBottom="80dp" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:id="@+id/balls"
 
@@ -84,7 +92,8 @@ android:focusable="false"
         android:layout_alignLeft="@+id/overs"
         android:layout_alignStart="@+id/overs"
         android:layout_alignRight="@+id/overs"
-        android:layout_alignEnd="@+id/overs" />
+        android:layout_alignEnd="@+id/overs"
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
