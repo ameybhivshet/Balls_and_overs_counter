@@ -3,6 +3,7 @@ package com.example.amey.ballsandoverscounter;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -62,10 +63,18 @@ public class Counting extends AppCompatActivity {
         if(cmplt!=Integer.parseInt(String.valueOf(overs.getText()))) {
             ball++;
             balls.setText(""+ball);
-            if (ball == 6) {
-                balls.setText("" + ball);
-                cmplt++;
 
+
+            if (ball > 6) {
+               // balls.setText("" + ball);
+
+                cmplt++;
+                if(cmplt==1) {
+                    Toast.makeText(this, "" + cmplt + " over completed", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(this, "" + cmplt + " overs completed", Toast.LENGTH_SHORT).show();
+                }
                 completed.setText("" + cmplt);
 
 

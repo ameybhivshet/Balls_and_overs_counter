@@ -24,6 +24,7 @@ EditText minovers;
         Log.d("a",String.valueOf(minovers.getText()));
         startActivity(intent);
 
+
     }
 
 
