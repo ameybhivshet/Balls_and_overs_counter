@@ -65,7 +65,7 @@ public class Counting extends AppCompatActivity {
             balls.setText(""+ball);
 
 
-            if (ball > 6) {
+            if (ball == 6) {
                // balls.setText("" + ball);
 
                 cmplt++;
