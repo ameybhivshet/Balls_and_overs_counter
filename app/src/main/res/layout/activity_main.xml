@@ -16,18 +16,20 @@
         android:textSize="20dp"
         android:textColor="#0b0b0b"
         android:id="@+id/textView"
-        android:layout_centerVertical="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="56dp" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:id="@+id/minovers"
         android:inputType="number"
 
-        android:layout_centerVertical="true"
+        android:layout_alignBottom="@+id/textView"
         android:layout_toRightOf="@+id/textView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_toEndOf="@+id/textView" />
 
     <Button
         android:layout_width="50dp"
