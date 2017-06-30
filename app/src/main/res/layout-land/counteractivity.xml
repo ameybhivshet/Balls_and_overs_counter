@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:visibility="visible">
 
     <EditText
         android:layout_width="40dp"
@@ -12,10 +12,8 @@
         android:visibility="visible"
         android:textSize="20dp"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/textView2"
-        android:layout_toStartOf="@+id/textView2"
-        android:layout_marginRight="53dp"
-        android:layout_marginEnd="53dp" />
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,7 +31,7 @@
 
     <EditText
         android:layout_width="40dp"
-        android:focusable="false"
+android:focusable="false"
         android:layout_height="wrap_content"
         android:id="@+id/overs"
         android:visibility="visible"
@@ -52,9 +50,10 @@
         android:background="@drawable/green"
         android:id="@+id/button2"
         android:onClick="plus"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/completed"
-        android:layout_alignStart="@+id/completed" />
+        android:layout_alignBaseline="@+id/button4"
+        android:layout_alignBottom="@+id/button4"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -65,8 +64,8 @@
         android:id="@+id/button3"
         android:onClick="minus"
         android:layout_alignTop="@+id/button2"
-        android:layout_alignLeft="@+id/overs"
-        android:layout_alignStart="@+id/overs" />
+        android:layout_alignLeft="@+id/balls"
+        android:layout_alignStart="@+id/balls" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -81,8 +80,30 @@
         android:layout_toLeftOf="@+id/overs"
         android:layout_toStartOf="@+id/overs" />
 
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/balls"
 
+android:focusable="false"
+        android:layout_marginTop="60dp"
+        android:visibility="visible"
+        android:layout_below="@+id/overs"
+        android:layout_alignLeft="@+id/overs"
+        android:layout_alignStart="@+id/overs"
+        android:layout_alignRight="@+id/overs"
+        android:layout_alignEnd="@+id/overs"
+        android:textSize="20dp" />
 
-
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="balls bowled"
+        android:textSize="25dp"
+        android:id="@+id/textView3"
+        android:textColor="#000000"
+        android:layout_alignBottom="@+id/balls"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2" />
 </RelativeLayout>
