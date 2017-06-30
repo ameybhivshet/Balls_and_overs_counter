@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.amey.ballsandoverscounter.MainActivity">
+    tools:context="com.example.amey.ballsandoverscounter.MainActivity"
+    android:background="#ffffff">
 
     <TextView
         android:layout_width="wrap_content"
@@ -26,12 +27,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/minovers"
         android:inputType="number"
-        android:background="@android:color/transparent"
         android:layout_alignBottom="@+id/textView"
         android:layout_toRightOf="@+id/textView"
         android:layout_toEndOf="@+id/textView"
         android:textAlignment="center"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:backgroundTint="#c6c6c6" />
 
     <Button
         android:layout_width="50dp"
@@ -41,6 +42,7 @@
         android:id="@+id/button"
         android:onClick="done"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:theme="@style/Base.TextAppearance.AppCompat.Body2" />
 
 </RelativeLayout>
