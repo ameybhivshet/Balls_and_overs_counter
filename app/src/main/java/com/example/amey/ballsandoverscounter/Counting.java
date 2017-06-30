@@ -79,7 +79,10 @@ public class Counting extends AppCompatActivity {
 
 
 
-
+                if (cmplt == Integer.parseInt(String.valueOf(overs.getText())))
+                {
+                    Toast.makeText(this, " All Overs completed", Toast.LENGTH_SHORT).show();
+                }
                 balls.setText("0");
 
             }

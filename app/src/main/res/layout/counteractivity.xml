@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:visibility="visible">
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
     <EditText
         android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:id="@+id/completed"
         android:focusable="false"
-
+        android:background="@android:color/transparent"
         android:visibility="visible"
         android:textSize="20dp"
+        android:textAlignment="center"
         android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3" />
+        android:layout_toLeftOf="@+id/textView2"
+        android:layout_toStartOf="@+id/textView2"
+        android:layout_marginTop="50dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="out of"
+        android:text="/"
         android:textSize="25dp"
         android:paddingLeft="2dp"
 
         android:id="@+id/textView2"
         android:textColor="#000000"
         android:textIsSelectable="true"
-        android:layout_alignBottom="@+id/completed"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignBottom="@+id/overs"
+        android:layout_alignLeft="@+id/button4"
+        android:layout_alignStart="@+id/button4" />
 
     <EditText
         android:layout_width="40dp"
@@ -36,11 +38,13 @@ android:focusable="false"
         android:id="@+id/overs"
         android:visibility="visible"
         android:textSize="20dp"
-        android:layout_alignBottom="@+id/textView2"
+        android:background="@android:color/transparent"
+        android:layout_above="@+id/textView3"
         android:layout_toRightOf="@+id/textView2"
         android:layout_toEndOf="@+id/textView2"
-        android:layout_marginLeft="42dp"
-        android:layout_marginStart="42dp" />
+        android:textAlignment="center"
+        android:inputType="none"
+        />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -51,8 +55,8 @@ android:focusable="false"
         android:id="@+id/button2"
         android:onClick="plus"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3" />
+        android:layout_toRightOf="@+id/completed"
+        android:layout_toEndOf="@+id/completed" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -62,9 +66,10 @@ android:focusable="false"
         android:background="@drawable/red"
         android:id="@+id/button3"
         android:onClick="minus"
-        android:layout_alignTop="@+id/button2"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2" />
+        android:layout_below="@+id/button2"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2"
+        android:layout_marginTop="48dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -76,34 +81,42 @@ android:focusable="false"
 
         android:id="@+id/button4"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_marginBottom="80dp" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:id="@+id/balls"
-
+        android:background="@android:color/transparent"
 android:focusable="false"
-        android:layout_marginTop="60dp"
         android:visibility="visible"
-        android:layout_below="@+id/overs"
-        android:layout_alignLeft="@+id/overs"
-        android:layout_alignStart="@+id/overs"
-        android:layout_alignRight="@+id/overs"
-        android:layout_alignEnd="@+id/overs"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_alignRight="@+id/textView4"
+        android:layout_alignEnd="@+id/textView4" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="balls bowled"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:id="@+id/textView3"
         android:textColor="#000000"
-        android:layout_alignBottom="@+id/balls"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2" />
+        android:layout_marginTop="68dp"
+        android:layout_below="@+id/completed"
+        android:layout_toLeftOf="@+id/textView4"
+        android:layout_toStartOf="@+id/textView4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overs"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:id="@+id/textView4"
+        android:layout_above="@+id/textView3"
+        android:layout_toRightOf="@+id/overs"
+        android:layout_toEndOf="@+id/overs" />
+
 </RelativeLayout>

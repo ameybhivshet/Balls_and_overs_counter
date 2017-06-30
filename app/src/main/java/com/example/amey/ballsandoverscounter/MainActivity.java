@@ -23,7 +23,7 @@ EditText minovers;
     {
         Intent intent;
         intent=new Intent(this,Counting.class);
-        if(String.valueOf(minovers.getText())==" " ||Integer.parseInt(String.valueOf(minovers.getText()))==0 )
+        if(minovers.getText().toString().matches("") ||Integer.parseInt(String.valueOf(minovers.getText()))==0 )
         {
             Toast.makeText(this, " enter a valid input ", Toast.LENGTH_SHORT).show();
         }

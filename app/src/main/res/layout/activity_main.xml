@@ -26,10 +26,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/minovers"
         android:inputType="number"
-
+        android:background="@android:color/transparent"
         android:layout_alignBottom="@+id/textView"
         android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView" />
+        android:layout_toEndOf="@+id/textView"
+        android:textAlignment="center"
+        android:textSize="20dp" />
 
     <Button
         android:layout_width="50dp"
