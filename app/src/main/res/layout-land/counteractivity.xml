@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/completed"
+        android:focusable="false"
+
+        android:visibility="visible"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/textView2"
+        android:layout_toStartOf="@+id/textView2"
+        android:layout_marginRight="53dp"
+        android:layout_marginEnd="53dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="out of"
+        android:textSize="25dp"
+        android:paddingLeft="2dp"
+
+        android:id="@+id/textView2"
+        android:textColor="#000000"
+        android:textIsSelectable="true"
+        android:layout_alignBottom="@+id/completed"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="40dp"
+        android:focusable="false"
+        android:layout_height="wrap_content"
+        android:id="@+id/overs"
+        android:visibility="visible"
+        android:textSize="20dp"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:background="@drawable/green"
+        android:id="@+id/button2"
+        android:onClick="plus"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/completed"
+        android:layout_alignStart="@+id/completed" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:background="@drawable/red"
+        android:id="@+id/button3"
+        android:onClick="minus"
+        android:layout_alignTop="@+id/button2"
+        android:layout_alignLeft="@+id/overs"
+        android:layout_alignStart="@+id/overs" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:background="@drawable/refreshblue"
+        android:onClick="reset"
+
+        android:id="@+id/button4"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/overs"
+        android:layout_toStartOf="@+id/overs" />
+
+
+
+
+
+</RelativeLayout>
