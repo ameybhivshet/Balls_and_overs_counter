@@ -50,6 +50,7 @@ public class Counting extends AppCompatActivity {
     public void plus(View view)
     {
 
+
         String b;
         int ball;
         String c;
@@ -117,9 +118,14 @@ String b;
 
 balls.setText("0");
         completed.setText("0");
+        overs.setText("0");
 
         Intent intent=new Intent(this,MainActivity.class);
-        startActivity(intent);
+     //   Intent intent = new Intent(getApplicationContext(), FirstActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("EXIT", true);
+      //  startActivity(intent);
+       startActivity(intent);
     }
 
 }

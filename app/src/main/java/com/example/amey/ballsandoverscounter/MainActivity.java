@@ -1,6 +1,8 @@
 package com.example.amey.ballsandoverscounter;
 
+import android.app.FragmentManager;
 import android.content.Intent;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,18 +10,27 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-EditText minovers;
+public class MainActivity extends AppCompatActivity implements Mydialog.Communicator {
+    EditText minovers;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        minovers= (EditText) findViewById(R.id.minovers);
+        // setContentView(R.layout.activity_main);
+        //minovers= (EditText) findViewById(R.id.minovers);
 
-
+        FragmentManager manager = getFragmentManager();
+        Mydialog mydialog = new Mydialog();
+        mydialog.show(manager, "Mydialog");
 
     }
-        public void done(View view)
+
+    @Override
+    public void respond() {
+      this.finish();
+       // System.exit(0);
+    }
+   /*     public void done(View view)
     {
         Intent intent;
         intent=new Intent(this,Counting.class);
@@ -41,4 +52,6 @@ EditText minovers;
 
 
 
+
+*/
 }
