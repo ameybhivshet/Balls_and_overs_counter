@@ -1,121 +1,475 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background">
 
-    <EditText
-        android:layout_width="40dp"
+    <ScrollView
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/completed"
-        android:focusable="false"
-        android:visibility="visible"
-        android:textSize="20dp"
-        android:textAlignment="center"
+        android:id="@+id/scrollView"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/textView2"
-        android:layout_toStartOf="@+id/textView2"
-        android:layout_marginTop="50dp"
-        android:background="@android:color/transparent" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <RelativeLayout
+
+
+
+
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="/"
-        android:textSize="25dp"
-        android:paddingLeft="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
-        android:id="@+id/textView2"
-        android:textColor="#000000"
-        android:textIsSelectable="true"
-        android:layout_alignBottom="@+id/completed"
-        android:layout_alignLeft="@+id/button4"
-        android:layout_alignStart="@+id/button4" />
+<EditText
+    android:layout_width="40dp"
 
-    <EditText
-        android:layout_width="40dp"
-android:focusable="false"
-        android:layout_height="wrap_content"
-        android:id="@+id/overs"
-        android:visibility="visible"
-        android:textSize="20dp"
-        android:textAlignment="center"
-        android:inputType="none"
-        android:layout_alignTop="@+id/completed"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2"
-        android:background="@android:color/transparent" />
+    android:layout_height="wrap_content"
+    android:id="@+id/completed"
+    android:focusable="false"
+    android:textColor="@color/textcolor"
+    android:visibility="visible"
+    android:textSize="20sp"
+    android:background="@android:color/transparent"
+    android:textAlignment="center"
+    android:layout_marginTop="42dp"
+    android:layout_alignParentTop="true"
+    android:layout_toLeftOf="@+id/textView2"
+    android:layout_toStartOf="@+id/textView2" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text=""
-        android:background="@drawable/green"
-        android:id="@+id/button2"
-        android:onClick="plus"
-        android:layout_above="@+id/button4"
-        android:layout_toLeftOf="@+id/textView3"
-        android:layout_toStartOf="@+id/textView3" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:text="/"
+    android:textSize="30sp"
+    android:paddingLeft="2dp"
+    android:textColor="@color/textcolor"
+    android:id="@+id/textView2"
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text=""
-        android:background="@drawable/red"
-        android:id="@+id/button3"
-        android:onClick="minus"
-        android:layout_above="@+id/button4"
-        android:layout_toRightOf="@+id/textView4"
-        android:layout_toEndOf="@+id/textView4" />
+    android:textIsSelectable="true"
+    android:layout_alignBottom="@+id/overs"
+    android:layout_toLeftOf="@+id/overs"
+    android:layout_toStartOf="@+id/overs" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text=""
-        android:background="@drawable/refreshblue"
-        android:onClick="reset"
+<EditText
+    android:layout_width="40dp"
+    android:focusable="false"
+    android:layout_height="wrap_content"
+    android:id="@+id/overs"
+    android:visibility="visible"
+    android:textSize="20sp"
+    android:background="@android:color/transparent"
+    android:textColor="@color/textcolor"
+    android:textAlignment="center"
+    android:inputType="none"
+    android:layout_alignTop="@+id/completed"
+    android:layout_toLeftOf="@+id/textView4"
+    android:layout_toStartOf="@+id/textView4" />
 
-        android:id="@+id/button4"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+<ImageButton
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:text=""
+android:src="@drawable/plus"
+    android:background="@null"
+    android:id="@+id/button2"
+    android:onClick="plus"
+    android:layout_alignBottom="@+id/textView5"
+    android:layout_alignRight="@+id/score"
+    android:layout_alignEnd="@+id/score" />
 
-    <EditText
-        android:layout_width="40dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/balls"
-        android:focusable="false"
-        android:visibility="visible"
-        android:textSize="20dp"
-        android:allowUndo="true"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_alignRight="@+id/textView4"
-        android:layout_alignEnd="@+id/textView4"
-        android:background="@android:color/transparent"
-        android:textAlignment="center" />
+<ImageButton
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:text=""
+    android:src="@drawable/minus"
+    android:background="@null"
+    android:id="@+id/button3"
+    android:onClick="minus"
+    android:layout_alignBottom="@+id/balls"
+    android:layout_toRightOf="@+id/balls"
+    android:layout_toEndOf="@+id/balls"
+    android:layout_marginLeft="3dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="balls bowled"
-        android:textSize="20dp"
-        android:id="@+id/textView3"
-        android:textColor="#000000"
-        android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/overs"
-        android:layout_alignEnd="@+id/overs" />
+<EditText
+    android:layout_width="40dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/balls"
+    android:background="@android:color/transparent"
+    android:focusable="false"
+    android:visibility="visible"
+    android:textAlignment="center"
+    android:textSize="20sp"
+    android:layout_alignBottom="@+id/textView3"
+    android:layout_toRightOf="@+id/textView3"
+    android:layout_toEndOf="@+id/textView3" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Overs"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        android:id="@+id/textView4"
-        android:layout_alignBottom="@+id/overs"
-        android:layout_toRightOf="@+id/overs"
-        android:layout_toEndOf="@+id/overs" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:text="balls bowled"
+    android:textColor="@color/textcolor"
+    android:textSize="20sp"
+    android:id="@+id/textView3"
+
+    android:layout_alignBottom="@+id/button2"
+
+    android:layout_centerHorizontal="true" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Overs"
+
+    android:textSize="20sp"
+    android:textColor="@color/textcolor"
+    android:id="@+id/textView4"
+    android:layout_alignBaseline="@id/completed"
+    android:layout_alignBottom="@+id/overs"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginRight="15dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:text="Wickets"
+    android:id="@+id/textView10"
+    android:textColor="@color/textcolor"
+    android:layout_alignTop="@+id/add4"
+    android:layout_alignRight="@+id/button4"
+    android:layout_alignEnd="@+id/button4" />
+
+<EditText
+    android:layout_width="40dp"
+    android:layout_height="wrap_content"
+    android:inputType="numberDecimal"
+    android:ems="10"
+    android:textColor="@color/textcolor"
+    android:background="@android:color/transparent"
+    android:textSize="20sp"
+    android:textAlignment="center"
+    android:id="@+id/wickets1"
+    android:focusable="false"
+    android:layout_alignBottom="@+id/textView10"
+    android:layout_toRightOf="@+id/textView3"
+    android:layout_toEndOf="@+id/textView3" />
+
+<ImageButton
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text=""
+    android:src="@drawable/plus"
+    android:background="@null"
+    android:onClick="wicketplu"
+    android:id="@+id/wicketsplus"
+
+    android:layout_alignBottom="@+id/textView10"
+    android:layout_alignLeft="@+id/button2"
+    android:layout_alignStart="@+id/button2" />
+
+<ImageButton
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text=""
+    android:src="@drawable/minus"
+    android:background="@null"
+    android:id="@+id/wicketsminus"
+    android:onClick="wicketminu"
+
+    android:layout_alignBottom="@+id/wickets1"
+    android:layout_alignRight="@+id/button3"
+    android:layout_alignEnd="@+id/button3" />
+
+
+<ImageButton
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:src="@drawable/restart"
+    android:background="@null"
+    android:onClick="reset"
+
+    android:id="@+id/button4"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    />
+
+
+<EditText
+    android:layout_width="40dp"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:inputType="numberDecimal"
+    android:id="@+id/score"
+    android:background="@android:color/transparent"
+    android:textSize="20sp"
+    android:textColor="@color/textcolor"
+    android:focusable="false"
+    android:textAlignment="center"
+    android:layout_alignTop="@+id/wickets2"
+    android:layout_toLeftOf="@+id/textView6"
+    android:layout_toStartOf="@+id/textView6" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:text="/"
+    android:textColor="@color/textcolor"
+    android:id="@+id/textView6"
+    android:textSize="30sp"
+    android:layout_alignBottom="@+id/wickets2"
+    android:layout_toLeftOf="@+id/wickets2"
+    android:layout_toStartOf="@+id/wickets2" />
+
+<EditText
+    android:layout_width="40dp"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:text=""
+    android:textSize="20sp"
+    android:textAlignment="center"
+    android:textColor="@color/textcolor"
+    android:inputType="numberDecimal"
+    android:id="@+id/wickets2"
+    android:focusable="false"
+    android:background="@android:color/transparent"
+    android:layout_alignBottom="@+id/completed"
+    android:layout_alignLeft="@+id/textView3"
+    android:layout_alignStart="@+id/textView3" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:text="Add"
+    android:id="@+id/textView8"
+    android:textColor="@color/textcolor"
+    android:layout_marginTop="50dp"
+    android:layout_below="@+id/textView6"
+    android:layout_toLeftOf="@+id/add2"
+    android:layout_toStartOf="@+id/add2" />
+
+
+<ImageButton
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:text=""
+    android:src="@drawable/add1"
+    android:background="@null"
+    android:id="@+id/add1"
+    android:onClick="add1"
+    android:layout_below="@+id/textView8"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="false"
+    android:layout_margin="1dp" />
+
+<ImageButton
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:text=""
+    android:src="@drawable/add2"
+    android:background="@null"
+    android:id="@+id/add2"
+    android:onClick="add2"
+    android:layout_alignTop="@+id/add1"
+    android:layout_toRightOf="@+id/add1"
+    android:layout_toEndOf="@+id/add1"
+    android:layout_margin="1dp" />
+<ImageButton
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:text=""
+    android:src="@drawable/add3"
+    android:background="@null"
+    android:id="@+id/add3"
+    android:onClick="add3"
+    android:layout_below="@+id/add1"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_margin="1dp" />
+
+<ImageButton
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:text=""
+    android:src="@drawable/add4"
+    android:background="@null"
+    android:id="@+id/add4"
+    android:onClick="add4"
+    android:layout_alignTop="@+id/add3"
+    android:layout_toRightOf="@+id/add3"
+    android:layout_toEndOf="@+id/add3"
+    android:layout_margin="1dp" />
+
+<ImageButton
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:text=""
+    android:src="@drawable/add5"
+    android:background="@null"
+    android:id="@+id/add5"
+    android:onClick="add5"
+    android:layout_below="@+id/add4"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_margin="1dp" />
+
+<ImageButton
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:text=""
+    android:src="@drawable/add6"
+    android:background="@null"
+    android:id="@+id/add6"
+    android:onClick="add6"
+    android:layout_below="@+id/add3"
+    android:layout_toRightOf="@+id/add3"
+    android:layout_toEndOf="@+id/add3"
+    android:layout_margin="1dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:text="Sub"
+    android:textColor="@color/textcolor"
+    android:id="@+id/textView9"
+    android:layout_alignTop="@+id/textView5"
+    android:layout_toLeftOf="@+id/textView7"
+    android:layout_toStartOf="@+id/textView7" />
+<ImageButton
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:text=""
+    android:src="@drawable/sub1"
+    android:background="@null"
+    android:id="@+id/sub1"
+    android:onClick="sub1"
+    android:layout_below="@+id/button3"
+    android:layout_alignLeft="@+id/textView9"
+    android:layout_alignStart="@+id/textView9" />
+
+
+<ImageButton
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:text=""
+    android:src="@drawable/sub3"
+    android:background="@null"
+    android:id="@+id/sub3"
+    android:onClick="sub3"
+    android:layout_below="@+id/sub1"
+    android:layout_alignLeft="@+id/sub1"
+    android:layout_alignStart="@+id/sub1" />
+
+<ImageButton
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:text=""
+    android:src="@drawable/sub2"
+    android:background="@null"
+    android:onClick="sub2"
+    android:id="@+id/sub2"
+    android:layout_alignTop="@+id/sub1"
+    android:layout_alignRight="@+id/textView7"
+    android:layout_alignEnd="@+id/textView7"
+    android:layout_margin="1dp" />
+
+
+<ImageButton
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:text=""
+    android:src="@drawable/sub6"
+    android:background="@null"
+    android:id="@+id/sub6"
+    android:onClick="sub6"
+    android:layout_below="@+id/sub4"
+    android:layout_toRightOf="@+id/sub3"
+    android:layout_toEndOf="@+id/sub3" />
+
+<ImageButton
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:text=""
+    android:src="@drawable/sub5"
+    android:background="@null"
+    android:id="@+id/sub5"
+    android:onClick="sub5"
+    android:layout_alignTop="@+id/sub6"
+    android:layout_toLeftOf="@+id/sub6"
+    android:layout_toStartOf="@+id/sub6" />
+
+<ImageButton
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:text=""
+    android:src="@drawable/sub4"
+    android:background="@null"
+    android:id="@+id/sub4"
+    android:onClick="sub5"
+    android:layout_below="@+id/sub2"
+    android:layout_toRightOf="@+id/sub1"
+    android:layout_toEndOf="@+id/sub1" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:text="(Runs)"
+    android:textColor="@color/textcolor"
+    android:id="@+id/textView5"
+    android:layout_alignBottom="@+id/textView8"
+    android:layout_toRightOf="@+id/textView8"
+    android:layout_toEndOf="@+id/textView8" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:text="(Runs)"
+    android:textColor="@color/textcolor"
+    android:id="@+id/textView7"
+    android:layout_above="@+id/add2"
+    android:layout_alignLeft="@+id/textView4"
+    android:layout_alignStart="@+id/textView4" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:text="Score"
+    android:textColor="@color/textcolor"
+    android:id="@+id/textView11"
+    android:layout_alignBottom="@+id/textView2"
+    android:layout_toLeftOf="@+id/score"
+    android:layout_toStartOf="@+id/score"
+    android:layout_alignBaseline="@id/score"
+    android:textSize="20sp" />
+
+</RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

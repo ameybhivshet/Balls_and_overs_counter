@@ -1,16 +1,20 @@
 package com.example.amey.ballsandoverscounter;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.DialogFragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -21,17 +25,34 @@ public class Mydialog extends DialogFragment {
     Button done, exit;
     Communicator comm;
 EditText minovers;
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         View rootview = inflater.inflate(R.layout.dialog, container, false);
-        getDialog().setTitle("no of overs");
+
+       // getDialog().setTitle(Html.fromHtml("<font color='#FF7F27'>No of overs</font>"));
+        getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         setCancelable(false);
+
         minovers= (EditText) rootview.findViewById(R.id.minovers);
         done = (Button) rootview.findViewById(R.id.done);
         exit = (Button) rootview.findViewById(R.id.exit);
         return rootview;
         //return super.onCreateView(inflater, container, savedInstanceState);
+
+    }
+
+
+
+    public void onStart() {
+        super.onStart();
+        int width = getResources().getDimensionPixelSize(R.dimen.width);
+        int height = getResources().getDimensionPixelSize(R.dimen.height);
+        getDialog().getWindow().setLayout(width, height);
+
 
     }
 
@@ -76,9 +97,7 @@ comm.respond();
 
     }
 
-    public interface Communicator {
-         void respond();
-    }
+
 
 }
 

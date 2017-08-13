@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements Mydialog.Communicator {
+public class MainActivity extends AppCompatActivity implements Communicator{
     EditText minovers;
 
     @Override
