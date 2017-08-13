@@ -13,11 +13,11 @@
         android:background="@android:color/transparent"
 
         android:textSize="20sp"
-        android:textAlignment="center"
-        android:layout_marginTop="42dp"
+        android:textAlignment="textEnd"
+        android:layout_marginTop="44dp"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/textView2"
-        android:layout_toStartOf="@+id/textView2" />
+        android:layout_toLeftOf="@+id/textView12"
+        android:layout_toStartOf="@+id/textView12" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -83,12 +83,13 @@ android:focusable="false"
         android:background="@android:color/transparent"
         android:textColor="@color/textcolor"
 android:focusable="false"
-        android:textAlignment="center"
+        android:textAlignment="textEnd"
         android:visibility="visible"
         android:textSize="20sp"
         android:layout_alignBottom="@+id/textView3"
         android:layout_toRightOf="@+id/completed"
-        android:layout_toEndOf="@+id/completed" />
+        android:layout_toEndOf="@+id/completed"
+        android:layout_marginLeft="4dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -135,7 +136,7 @@ android:focusable="false"
         android:textColor="@color/textcolor"
         android:focusable="false"
         android:textSize="20sp"
-        android:textAlignment="center"
+        android:textAlignment="textEnd"
         android:id="@+id/wickets1"
         android:background="@android:color/transparent"
         android:layout_alignBottom="@+id/wicketsminus"
@@ -394,10 +395,9 @@ android:src="@drawable/add1"
         android:src="@drawable/sub6"
         android:id="@+id/sub6"
         android:onClick="sub6"
-        android:layout_below="@+id/sub3"
-        android:layout_toRightOf="@+id/sub2"
-        android:layout_toEndOf="@+id/sub2"
-        android:layout_margin="1dp" />
+        android:layout_below="@+id/add1"
+        android:layout_alignRight="@+id/sub3"
+        android:layout_alignEnd="@+id/sub3" />
 
     <ImageButton
         style="?android:attr/buttonStyleSmall"
@@ -408,10 +408,9 @@ android:src="@drawable/add1"
         android:src="@drawable/sub5"
         android:id="@+id/sub5"
         android:onClick="sub5"
-        android:layout_below="@+id/sub2"
-        android:layout_toLeftOf="@+id/sub3"
-        android:layout_toStartOf="@+id/sub3"
-        android:layout_margin="1dp" />
+        android:layout_below="@+id/add1"
+        android:layout_toRightOf="@+id/balls"
+        android:layout_toEndOf="@+id/balls" />
 
     <ImageButton
         style="?android:attr/buttonStyleSmall"
@@ -450,4 +449,30 @@ android:src="@drawable/add1"
         android:layout_toStartOf="@+id/score"
         android:layout_alignBaseline="@id/score"
         android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="."
+
+        android:textColor="@color/textcolor"
+
+        android:textSize="20sp"
+        android:id="@+id/textView12"
+        android:layout_alignBottom="@+id/oversdecimal"
+        android:layout_toLeftOf="@+id/oversdecimal"
+        android:layout_toStartOf="@+id/oversdecimal" />
+
+    <EditText
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/oversdecimal"
+        android:background="@android:color/transparent"
+        android:textColor="@color/textcolor"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/overs"
+        android:layout_toLeftOf="@+id/overs"
+        android:layout_toStartOf="@+id/overs" />
 </RelativeLayout>

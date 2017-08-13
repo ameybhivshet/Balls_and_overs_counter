@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import static com.example.amey.ballsandoverscounter.R.id.oversdecimal;
+
 /**
  * Created by amey on 3/11/2017.
  */
@@ -23,7 +25,7 @@ public class Counting extends AppCompatActivity {
     String a, s;
     int add, sub;
 
-    EditText completed;
+    EditText completed,decimalballs;
     EditText balls,wickets1;
     ImageButton a1,a2,a3,a4,a5,a6,s1,s2,s3,s4,s5,s6;
     @Override
@@ -36,7 +38,8 @@ public class Counting extends AppCompatActivity {
         wickets1= (EditText) findViewById(R.id.wickets1);
         score= (EditText) findViewById(R.id.score);
         wickets2= (EditText) findViewById(R.id.wickets2);
-
+decimalballs= (EditText) findViewById(oversdecimal);
+        decimalballs.setText("0");
         score.setText("0");
         wickets2.setText("0");
      //   wicketminus = (Button) findViewById(R.id.wicketsminus);
@@ -247,6 +250,7 @@ public class Counting extends AppCompatActivity {
         if (cmplt != Integer.parseInt(String.valueOf(overs.getText()))) {
             ball++;
             balls.setText("" + ball);
+            decimalballs.setText(""+ball);
 
 
             if (ball == 6) {
@@ -266,6 +270,7 @@ public class Counting extends AppCompatActivity {
                     Toast.makeText(this, " All Overs completed", Toast.LENGTH_SHORT).show();
                 }
                 balls.setText("0");
+                decimalballs.setText("0");
 
             }
         } else if (cmplt == Integer.parseInt(String.valueOf(overs.getText()))) {
